@@ -6,12 +6,19 @@ import "../../styles/card.css";
 
 export const Card = ({ product }) => {
   const [displayFilledFav, setDisplayFilledFav] = React.useState(false);
+  const [fixedFav, setFixedFav] = React.useState(false);
 
   const handleMouseOver = () => {
-    setDisplayFilledFav(true);
+    if (fixedFav) setDisplayFilledFav(false);
+    else setDisplayFilledFav(true);
   };
   const handleMouseLeave = () => {
-    setDisplayFilledFav(false);
+    if (fixedFav) setDisplayFilledFav(true);
+    else setDisplayFilledFav(false);
+  };
+
+  const handleClick = () => {
+    setFixedFav((prev) => !prev);
   };
 
   return (
@@ -22,6 +29,7 @@ export const Card = ({ product }) => {
           className="icon-wrapper"
           onMouseOver={handleMouseOver}
           onMouseLeave={handleMouseLeave}
+          onClick={handleClick}
         >
           {!displayFilledFav && <FavoriteIcon className="icon1" />}
           {displayFilledFav && <FilledFavoriteIcon className="icon2" />}
