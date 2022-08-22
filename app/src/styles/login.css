@@ -1,0 +1,40 @@
+.wrapper {
+  width: 100%;
+  height: var(--pageHeight);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.form-login {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--lightgrey);
+  border-radius: 16px;
+  box-shadow: 3px 3px 3px 3px var(--lightgrey);
+}
+.row1,
+.row2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+}
+.login-btn {
+  place-self: center;
+  padding-bottom: 5%;
+}
+.login-btn input {
+  width: 70px;
+  height: 25px;
+  background: var(--primary);
+  color: white;
+}
+.user-message {
+  text-align: center;
+}
+.wrapper button {
+  width: 100px;
+  height: 30px;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const menuItems = ["MacBook", "HP Series", "MSI"];
+const menuItems = ["MacBook", "HP Series", "MSI", "Login"];
 
 export const NavBar = () => {
   const handleClick = () => {

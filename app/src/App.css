@@ -5,6 +5,19 @@
   --primary: linear-gradient(to right, #f23456, #f23789);
   --primaryColor: #f23789;
   --secondary: #2fc3ec;
+  --lightgrey: #d3d3d3;
+  --navbarHeight: 15vh;
+  --pageHeight: 70vh;
+  --footerHeight: 15vh;
+}
+button,
+input[type="button"] {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
 }
 .container {
   display: flex;
@@ -17,7 +30,7 @@
 }
 .navbar {
   display: flex;
-  height: 15vh;
+  height: var(--navbarHeight);
   align-items: center;
 }
 .logo {
@@ -47,7 +60,7 @@ nav ul li a:hover {
 }
 .hero {
   display: flex;
-  min-height: 70vh;
+  min-height: var(--pageHeight);
   padding-top: 30px;
 }
 .col1 {
@@ -75,11 +88,6 @@ nav ul li a:hover {
 .buy-btn {
   width: 120px;
   height: 25px;
-  border-radius: 10px;
-  border: 0;
-  outline: none;
-  background: var(--primary);
-  color: white;
   transition: width 0.5s;
 }
 .buy-btn .arrow-icon {
@@ -94,7 +102,6 @@ nav ul li a:hover {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  cursor: pointer;
 }
 .buy-btn:hover .arrow-icon {
   display: block;
@@ -118,7 +125,7 @@ nav ul li a:hover {
   z-index: -1;
 }
 .footer {
-  height: 15vh;
+  height: var(--footerHeight);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,6 +133,13 @@ nav ul li a:hover {
 }
 .footer a {
   color: black;
+}
+.error {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -158,5 +172,12 @@ nav ul li a:hover {
   }
   #menuList a {
     color: white;
+  }
+  .error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
   }
 }

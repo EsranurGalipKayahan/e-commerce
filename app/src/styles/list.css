@@ -1,0 +1,10 @@
+.list {
+  width: 300px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.list-item {
+  display: flex;
+  justify-content: space-between;
+}
