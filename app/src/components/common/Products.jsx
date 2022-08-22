@@ -4,6 +4,7 @@ import { Card } from "./Card";
 import "../../styles/card.css";
 
 export const Products = () => {
+  //TODO:based on the typpe, get products from api
   const { type } = useParams();
   const product = {
     img: "https://source.unsplash.com/random/800x600",
